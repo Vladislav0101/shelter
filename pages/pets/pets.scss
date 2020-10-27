@@ -28,6 +28,7 @@ $color-primary-light: #fddcc4;
 }
 
 header {
+    z-index: 9999999;
     width: 100%;
     height: 120px;
     padding-top: 30px;
@@ -108,7 +109,24 @@ main {
 }
 
 .our-friends {
-    max-width: 1200px;
+    overflow: hidden;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#slider_box {
+    transform: translate(0px);
+    width: 3600px;
+    display: grid;
+    grid-template-columns: repeat(3, 1200px);
+    justify-content: space-between;
+    transition: all 1s linear;
+}
+
+.our_friends--1,
+.our_friends--2,
+.our_friends--3 {
+    width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 270px);
@@ -176,11 +194,11 @@ h3 {
     margin-top: 30px;
 }
 
-.first,
-.prev,
-.now,
-.next,
-.last {
+#first,
+#prev,
+#now,
+#next,
+#last {
     width: 52px;
     height: 52px;
     border-radius: 25px;
@@ -193,20 +211,21 @@ h3 {
     background: none;
     margin: 0 10px;
 }
-
-.now:hover,
-.next:hover,
-.last:hover {
+#first:hover,
+#prev:hover,
+#now:hover,
+#next:hover,
+#last:hover {
     background: $color-primary-light;
     border-color: $color-primary-light;
     cursor: pointer;
 }
 
-.first,
-.prev {
-    border: 2px solid $color-dark-s;
-    color: $color-dark-s;
-}
+// #first,
+// #prev {
+//     border: 2px solid $color-dark-s;
+//     color: $color-dark-s;
+// }
 
 // Footer
 footer {
@@ -275,8 +294,21 @@ footer {
         height: 1853px;
     }
     .our-friends {
-        grid-template-columns: repeat(2, 270px);
+        width: 692px;
+    }
+    #slider_box {
+        width: 2076px;
+        grid-template-columns: repeat(3, 692px);
         justify-content: space-around;
+    }
+    .our_friends--1,
+    .our_friends--2,
+    .our_friends--3 {
+        width: 692px;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 270px);
+        justify-content: space-between;
     }
     .elem:nth-child(7),
     .elem:nth-child(8) {
@@ -345,16 +377,31 @@ footer {
         margin-top: 40px;
         font-size: 25px;
     }
-    .first,
-    .prev,
-    .now,
-    .next,
-    .last {
+    #first,
+    #prev,
+    #now,
+    #next,
+    #last {
         margin: 0 3px;
     }
     .our-friends {
         grid-template-columns: repeat(1, 270px);
         justify-content: space-around;
+        width: 320px;
+    }
+    #slider_box {
+        width: 960px;
+        grid-template-columns: repeat(3, 320px);
+        justify-content: space-around;
+    }
+    .our_friends--1,
+    .our_friends--2,
+    .our_friends--3 {
+        width: 320px;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(1, 270px);
+        justify-content: space-between;
     }
     .elem:nth-child(4),
     .elem:nth-child(5),

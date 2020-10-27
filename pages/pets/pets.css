@@ -17,6 +17,7 @@
 }
 
 header {
+  z-index: 9999999;
   width: 100%;
   height: 120px;
   padding-top: 30px;
@@ -116,7 +117,30 @@ main {
 }
 
 .our-friends {
-  max-width: 1200px;
+  overflow: hidden;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#slider_box {
+  -webkit-transform: translate(0px);
+          transform: translate(0px);
+  width: 3600px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1200px)[3];
+      grid-template-columns: repeat(3, 1200px);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+}
+
+.our_friends--1,
+.our_friends--2,
+.our_friends--3 {
+  width: 1200px;
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
@@ -195,11 +219,11 @@ h3 {
   margin-top: 30px;
 }
 
-.first,
-.prev,
-.now,
-.next,
-.last {
+#first,
+#prev,
+#now,
+#next,
+#last {
   width: 52px;
   height: 52px;
   border-radius: 25px;
@@ -213,18 +237,14 @@ h3 {
   margin: 0 10px;
 }
 
-.now:hover,
-.next:hover,
-.last:hover {
+#first:hover,
+#prev:hover,
+#now:hover,
+#next:hover,
+#last:hover {
   background: #fddcc4;
   border-color: #fddcc4;
   cursor: pointer;
-}
-
-.first,
-.prev {
-  border: 2px solid #cdcdcd;
-  color: #cdcdcd;
 }
 
 footer {
@@ -307,10 +327,27 @@ footer {
     height: 1853px;
   }
   .our-friends {
-    -ms-grid-columns: (270px)[2];
-        grid-template-columns: repeat(2, 270px);
+    width: 692px;
+  }
+  #slider_box {
+    width: 2076px;
+    -ms-grid-columns: (692px)[3];
+        grid-template-columns: repeat(3, 692px);
     -ms-flex-pack: distribute;
         justify-content: space-around;
+  }
+  .our_friends--1,
+  .our_friends--2,
+  .our_friends--3 {
+    width: 692px;
+    margin: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (270px)[2];
+        grid-template-columns: repeat(2, 270px);
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .elem:nth-child(7),
   .elem:nth-child(8) {
@@ -383,11 +420,11 @@ footer {
     margin-top: 40px;
     font-size: 25px;
   }
-  .first,
-  .prev,
-  .now,
-  .next,
-  .last {
+  #first,
+  #prev,
+  #now,
+  #next,
+  #last {
     margin: 0 3px;
   }
   .our-friends {
@@ -395,6 +432,27 @@ footer {
         grid-template-columns: repeat(1, 270px);
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    width: 320px;
+  }
+  #slider_box {
+    width: 960px;
+    -ms-grid-columns: (320px)[3];
+        grid-template-columns: repeat(3, 320px);
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .our_friends--1,
+  .our_friends--2,
+  .our_friends--3 {
+    width: 320px;
+    margin: 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (270px)[1];
+        grid-template-columns: repeat(1, 270px);
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .elem:nth-child(4),
   .elem:nth-child(5),

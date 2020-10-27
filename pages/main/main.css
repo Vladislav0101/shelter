@@ -21,7 +21,7 @@ body {
 }
 
 .noise {
-  background-image: url(/assets/noise_transparent.png);
+  background-image: url(../../assets/noise_transparent.png);
   padding-top: 180px;
 }
 
@@ -504,7 +504,7 @@ footer {
 }
 
 .noise_footer {
-  background-image: url(/assets/noise_transparent.png);
+  background-image: url(../../assets/noise_transparent.png);
   height: 100%;
 }
 
