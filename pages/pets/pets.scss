@@ -22,9 +22,16 @@ $color-primary-light: #fddcc4;
     margin: 0 auto;
 }
 
-.burger,
-.burger_content {
+.burger {
     display: none;
+}
+
+.burger_content {
+    transform: translateX(320px);
+}
+
+.burger_translate {
+    transform: translateX(0px);
 }
 
 header {
@@ -361,6 +368,7 @@ footer {
         top: 50px;
         right: 35px;
         cursor: pointer;
+        z-index: 999;
         span {
             width: 2px;
             height: 30px;
@@ -394,6 +402,7 @@ footer {
         position: absolute;
         padding: 30px 0 0 10px;
         text-align: left;
+        transition: transform .4s linear;
         .list__link {
             color: $color-dark-s;
             font-size: 32px;

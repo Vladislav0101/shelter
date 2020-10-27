@@ -11,9 +11,18 @@
   margin: 0 auto;
 }
 
-.burger,
-.burger_content {
+.burger {
   display: none;
+}
+
+.burger_content {
+  -webkit-transform: translateX(320px);
+          transform: translateX(320px);
+}
+
+.burger_translate {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
 }
 
 header {
@@ -405,6 +414,7 @@ footer {
     top: 50px;
     right: 35px;
     cursor: pointer;
+    z-index: 999;
   }
   .burger_button span {
     width: 2px;
@@ -441,6 +451,10 @@ footer {
     position: absolute;
     padding: 30px 0 0 10px;
     text-align: left;
+    -webkit-transition: -webkit-transform .4s linear;
+    transition: -webkit-transform .4s linear;
+    transition: transform .4s linear;
+    transition: transform .4s linear, -webkit-transform .4s linear;
   }
   .burger_content .list__link {
     color: #cdcdcd;
