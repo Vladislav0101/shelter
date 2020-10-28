@@ -168,6 +168,11 @@ header {
   border-bottom: solid 3px #f1cdb3;
 }
 
+.dTactive:hover {
+  color: #545454 !important;
+  cursor: text;
+}
+
 main {
   height: 1462px;
   background: #f6f6f6;
@@ -431,6 +436,15 @@ footer {
   .menu {
     width: auto;
   }
+  .header {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .logo {
+    margin-right: 125px;
+    z-index: 999999;
+  }
   .list {
     display: none;
   }
@@ -496,11 +510,11 @@ footer {
   .burger_content {
     width: 320px;
     height: 100vh;
-    background-color: #292929;
+    background-color: #ffffff;
     top: 0;
     right: 0;
     position: absolute;
-    padding: 30px 0 0 10px;
+    padding: 170px 0 0 10px;
     text-align: left;
     -webkit-transition: -webkit-transform .4s linear;
     transition: -webkit-transform .4s linear;
@@ -508,19 +522,19 @@ footer {
     transition: transform .4s linear, -webkit-transform .4s linear;
   }
   .burger_content .list__link {
-    color: #cdcdcd;
+    color: #545454;
     font-size: 32px;
     height: 51px;
     margin: 0 auto;
   }
   .burger_content .list__link:hover {
-    color: #fafafa;
+    color: #292929;
   }
   .burger_content .list__item {
     margin-bottom: 40px;
   }
   .burger_content .list__item .list__link_active {
-    color: #fafafa;
+    color: #292929;
   }
   .hero-subtitle {
     margin: 42px auto;

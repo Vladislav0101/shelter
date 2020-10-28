@@ -145,6 +145,11 @@ header {
     border-bottom: solid 3px $color-primary;
 }
 
+.dTactive:hover {
+    color: $color-dark-l !important;
+    cursor: text;
+}
+
 // Main
 main {
     height: 1462px;
@@ -377,6 +382,13 @@ footer {
     .menu {
         width: auto;
     }
+    .header {
+        justify-content: flex-end;
+    }
+    .logo {
+        margin-right: 125px;
+        z-index: 999999;
+    }
     .list {
         display: none;
     }
@@ -434,26 +446,26 @@ footer {
     .burger_content {
         width: 320px;
         height: 100vh;
-        background-color: $color-dark-3xl;
+        background-color: $color-light-xl;
         top: 0;
         right: 0;
         position: absolute;
-        padding: 30px 0 0 10px;
+        padding: 170px 0 0 10px;
         text-align: left;
         transition: transform .4s linear;
         .list__link {
-            color: $color-dark-s;
+            color: $color-dark-l;
             font-size: 32px;
             height: 51px;
             margin: 0 auto;
         }
         .list__link:hover {
-            color: $color-light-s;
+            color: $color-dark-3xl;
         }
         .list__item {
             margin-bottom: 40px;
             .list__link_active {
-                color: $color-light-s;
+                color: $color-dark-3xl;
             }
         }
     }
