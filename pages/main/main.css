@@ -185,6 +185,7 @@ header {
 }
 
 .hero {
+  overflow: hidden;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 41.8% 58.2%;
