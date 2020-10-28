@@ -9,6 +9,10 @@ body {
     overflow-x: hidden;
 }
 
+.overflow_Y {
+    overflow-y: hidden;
+}
+
 $Georgia: Georgia;
 $Arial: Arial;
 $color-light-xl: #FFFFFF;
@@ -37,6 +41,38 @@ $color-primary-light:#FDDCC4;
 
 .burger {
     display: none;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+.burger_button_rotate {
+    transform: rotate(90deg);
+}
+
+#burger_shadow {
+    width: 100vw;
+    height: 0vh;
+    position: fixed;
+    background-color: $color-dark-xl;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    z-index: 9998;
+}
+
+@keyframes burgerShadow {
+    5% {
+        height: 100vh;
+    }
+    100% {
+        opacity: 0.7;
+        height: 100vh;
+    }
+}
+
+.burger_shadow--active {
+    animation: burgerShadow .2s linear forwards;
 }
 
 .burger_content {
@@ -62,6 +98,7 @@ header {
     display: flex;
     flex-direction: column;
     text-align: center;
+    text-decoration: none;
 }
 
 .logo__title {
@@ -148,6 +185,10 @@ header {
 }
 
 .hero-button {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 207px;
     height: 52px;
     margin-top: 40px;
@@ -302,6 +343,10 @@ header {
 }
 
 .friends--reset {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 261px;
     height: 52px;
     margin-top: 60px;
@@ -434,7 +479,7 @@ header {
     transition: all .1s linear;
 }
 
-.credit_card {
+.credit_card:hover {
     background: $color-primary-light;
 }
 
@@ -620,6 +665,7 @@ footer {
         right: 35px;
         cursor: pointer;
         z-index: 999;
+        transition: all .2s linear;
         span {
             width: 2px;
             height: 30px;
@@ -646,7 +692,7 @@ footer {
     }
     .burger_content {
         width: 320px;
-        height: 830px;
+        height: 100vh;
         background-color: $color-dark-3xl;
         top: 0;
         right: 0;

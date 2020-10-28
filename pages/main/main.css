@@ -10,6 +10,10 @@ body {
   overflow-x: hidden;
 }
 
+.overflow_Y {
+  overflow-y: hidden;
+}
+
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -27,6 +31,50 @@ body {
 
 .burger {
   display: none;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+
+.burger_button_rotate {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+#burger_shadow {
+  width: 100vw;
+  height: 0vh;
+  position: fixed;
+  background-color: #4C4C4C;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  z-index: 9998;
+}
+
+@-webkit-keyframes burgerShadow {
+  5% {
+    height: 100vh;
+  }
+  100% {
+    opacity: 0.7;
+    height: 100vh;
+  }
+}
+
+@keyframes burgerShadow {
+  5% {
+    height: 100vh;
+  }
+  100% {
+    opacity: 0.7;
+    height: 100vh;
+  }
+}
+
+.burger_shadow--active {
+  -webkit-animation: burgerShadow .2s linear forwards;
+          animation: burgerShadow .2s linear forwards;
 }
 
 .burger_content {
@@ -63,6 +111,7 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  text-decoration: none;
 }
 
 .logo__title {
@@ -167,6 +216,16 @@ header {
 }
 
 .hero-button {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 207px;
   height: 52px;
   margin-top: 40px;
@@ -342,6 +401,16 @@ header {
 }
 
 .friends--reset {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 261px;
   height: 52px;
   margin-top: 60px;
@@ -488,7 +557,7 @@ header {
   transition: all .1s linear;
 }
 
-.credit_card {
+.credit_card:hover {
   background: #FDDCC4;
 }
 
@@ -704,6 +773,8 @@ footer {
     right: 35px;
     cursor: pointer;
     z-index: 999;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
   }
   .burger_button span {
     width: 2px;
@@ -733,7 +804,7 @@ footer {
   }
   .burger_content {
     width: 320px;
-    height: 830px;
+    height: 100vh;
     background-color: #292929;
     top: 0;
     right: 0;
