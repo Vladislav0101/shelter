@@ -376,6 +376,7 @@ header {
 .friends__slider--elem:hover {
   background: #FFFFFF;
   cursor: pointer;
+  box-shadow: 0 0 20px 7px #00000026;
 }
 
 .friends__slider--elem h4 {
