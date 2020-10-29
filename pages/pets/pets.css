@@ -248,6 +248,7 @@ h3 {
 .elem:hover {
   background: #ffffff;
   cursor: pointer;
+  box-shadow: 0 0 20px 7px #00000026;
 }
 
 .friends--learn {
