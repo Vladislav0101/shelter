@@ -5,7 +5,9 @@
           box-sizing: border-box;
   font-weight: 400;
 }
-
+body{
+  oveflow-x: hidden;
+}
 .overflow_Y {
   overflow-y: hidden;
 }
